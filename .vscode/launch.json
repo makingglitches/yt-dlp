@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "yt_dlp",
+            "console": "integratedTerminal",
+            "args": [
+                "-f", 
+                "mp4", 
+                "--write-info-json", 
+                "https://www.tiktok.com/@avatarofkhaine2/video/7501035759915289899",
+                //"https://www.tiktok.com/@ariesgrim/video/7499342524494941483?is_from_webapp=1&sender_device=pc"
+               // "https://www.tiktok.com/@sz._.23/video/7497437001306672415?is_from_webapp=1&sender_device=pc"
+               //"https://www.tiktok.com/@avatarofkhaine2/video/7498865385035320618"
+              // "https://www.tiktok.com/@avatarofkhaine2/video/7501025760740773163"
+                ]
+        }
+    ]
+}
