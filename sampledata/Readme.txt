@@ -106,3 +106,6 @@ is to use 'Name' in conjunction with the 'CityCode' field with the pointofIntere
     "ttTypeNameMedium": "Restaurant",
     "ttTypeNameSuper": "Food and Drink"
   },
+
+
+Anyway this little shit even borrows a name I created heh.
