@@ -273,7 +273,10 @@ from .bitchute import (
     BitChuteChannelIE,
     BitChuteIE,
 )
-from .blackboardcollaborate import BlackboardCollaborateIE
+from .blackboardcollaborate import (
+    BlackboardCollaborateIE,
+    BlackboardCollaborateLaunchIE,
+)
 from .bleacherreport import (
     BleacherReportCMSIE,
     BleacherReportIE,
@@ -1554,6 +1557,7 @@ from .platzi import (
     PlatziCourseIE,
     PlatziIE,
 )
+from .playerfm import PlayerFmIE
 from .playplustv import PlayPlusTVIE
 from .playsuisse import PlaySuisseIE
 from .playtvak import PlaytvakIE
