@@ -2760,7 +2760,7 @@ class YoutubeIE(YoutubeBaseInfoExtractor):
         if max_depth == 1 and parent:
             return
 
-        max_comments, max_parents, max_replies, max_replies_per_thread, *_ = (
+        _max_comments, max_parents, max_replies, max_replies_per_thread, *_ = (
             int_or_none(p, default=sys.maxsize) for p in self._configuration_arg('max_comments') + [''] * 4)
 
         continuation = self._extract_continuation(root_continuation_data)
@@ -3610,6 +3610,10 @@ class YoutubeIE(YoutubeBaseInfoExtractor):
 
             if f.get('source_preference') is None:
                 f['source_preference'] = -1
+
+            # Deprioritize since its pre-merged m3u8 formats may have lower quality audio streams
+            if client_name == 'web_safari' and proto == 'hls' and live_status != 'is_live':
+                f['source_preference'] -= 1
 
             if missing_pot:
                 f['format_note'] = join_nonempty(f.get('format_note'), 'MISSING POT', delim=' ')
